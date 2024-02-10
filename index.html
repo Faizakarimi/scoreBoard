@@ -1,16 +1,39 @@
 <html>
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
+        <!-- <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet" crossorigin="use-credentials"> -->
+        
     </head>
     <body>
         <div class="container">
-            <div>
+            <div class="points-container"> 
                 <h3>HOME</h3>
+                <div class="points" id="home-point">0</div>
+                <div class="buttons">
+                    <button class="increment-btn" id="increment-1" onclick="homeIncrement()">+1</button>
+                    <button class="increment-btn" id="increment-2" onclick="homeIncrement()">+2</button>
+                    <button class="increment-btn" id="increment-3" onclick="homeIncrement()">+3</button>
+                   
+                   
+
+                </div>
             </div>
-            <div>
+            <div class="points-container"> 
                 <h3>GUEST</h3>
+                <div class="points" id="guest-point">0</div>
+                <div class="buttons">
+                    <button class="increment-btn" id="g-increment-1" onclick="guestIncrement()">+1</button>
+                    <button class="increment-btn" id="g-increment-2" onclick="guestIncrement()">+2</button>
+                    <button class="increment-btn" id="g-increment-3" onclick="guestIncrement()">+3</button>
+
+                </div>   
+              
             </div>
+            <button id="new-game" onclick="reset()">New Game</button>
+            
+            
         </div>
-        <script src="index.js"></script>
+        
+        <script src="index.js" ></script>
     </body>
 </html>
