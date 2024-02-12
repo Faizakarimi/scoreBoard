@@ -1,44 +1,46 @@
-let homePointEl = document.getElementById("home-point");
-let guestPointEl = document.getElementById("guest-point");
+let homePointEl = document.getElementById("home-counter");
+let guestPointEl = document.getElementById("guest-counter");
 
 
-let point = 0;
+let homeCounter = 0;
+let guestCounter = 0;
 
 function homeIncrement(){
     document.getElementById("increment-1").onclick = function(){
-        point = point + 1;
-        homePointEl.textContent = point;
+        homeCounter += 1;
+        homePointEl.textContent = homeCounter;
     };
     document.getElementById("increment-2").onclick = function(){
-        point += 2;
-        homePointEl.textContent = point;
+        homeCounter += 2;
+        homePointEl.textContent = homeCounter;
     };
     document.getElementById("increment-3").onclick = function(){
-        point += 3;
-        homePointEl.textContent = point;
+        homeCounter += 3;
+        homePointEl.textContent = homeCounter;
     };
    
 }
 function guestIncrement(){
     document.getElementById("g-increment-1").onclick = function(){
-        point = point + 1;
-        guestPointEl.textContent = point;
+        guestCounter += 1;
+        guestPointEl.textContent = guestCounter;
     };
     document.getElementById("g-increment-2").onclick = function(){
-        point += 2;
-        guestPointEl.textContent = point;
+        guestCounter += 2;
+        guestPointEl.textContent = guestCounter;
     }
     document.getElementById("g-increment-3").onclick = function(){
-        point += 3;
-        guestPointEl.textContent = point;
+        guestCounter += 3;
+        guestPointEl.textContent = guestCounter;
     };
    
 }
 
 function reset(){
     document.getElementById("new-game").onclick = function(){
-        point = 0;
-        guestPointEl.textContent = point;
-        homePointEl.textContent = point;
+        homeCounter = 0;
+        guestCounter = 0;
+        guestPointEl.textContent = guestCounter;
+        homePointEl.textContent = homeCounter;
     }
 }
